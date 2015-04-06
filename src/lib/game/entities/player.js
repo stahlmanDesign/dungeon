@@ -11,7 +11,7 @@ ig.module(
         size: { x: 24, y: 24 },
 		maxVel: {x: 100, y: 100},
 		friction: {x: 100, y: 100},
-		step: {x:640,y:640},
+		step: {x:320,y:320},
 		speed: 100,
 
         collides: ig.Entity.COLLIDES.PASSIVE,
@@ -33,22 +33,22 @@ ig.module(
 
         	if (ig.input.pressed('left')) {
 				//this.vel.x -= this.step.x;
-				this.pos.x -= 320;
+				this.pos.x -= this.step.x;
 			}
 			else
 			if (ig.input.pressed('right')) {
 				//this.vel.x += this.step.x;
-				this.pos.x += 320;
+				this.pos.x += this.step.x;
 			}
 			else
 			if (ig.input.pressed('up')) {
 				//this.vel.y -= this.step.y;
-				this.pos.y -= 512;
+				this.pos.y -= this.step.y;
 			}
 			else
 			if (ig.input.pressed('down')) {
 				//this.vel.y += this.step.y
-				this.pos.y += 512;
+				this.pos.y += this.step.y;
 			}
         }
     });
